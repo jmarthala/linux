@@ -20,5 +20,6 @@ The aim of this assignment is to create a Linux kernel module that queries vario
 * Install VMware Workstation on the Windows 11 machine.
 * Downloaded the Operating system image of the Ubuntu 22.04 LTS Desktop version.
 * Spin up a new virtual machine with below settings of Ubuntu OS in VMware Workstation.
-
+<div id="header" align="center">
 <img src="./Images/vv.png">
+</div>
