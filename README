@@ -1,18 +1,22 @@
-Linux kernel
-============
+##Name: Jahnavi Marthala
+##SJSU Id: 015351323
+##Assignment 1:
 
-There are several guides for kernel developers and users. These guides can
-be rendered in a number of formats, like HTML and PDF. Please read
-Documentation/admin-guide/README.rst first.
-
-In order to build the documentation, use ``make htmldocs`` or
-``make pdfdocs``.  The formatted documentation can also be read online at:
-
-    https://www.kernel.org/doc/html/latest/
-
-There are various text files in the Documentation/ subdirectory,
-several of them using the Restructured Text markup notation.
-
-Please read the Documentation/process/changes.rst file, as it contains the
-requirements for building and running the kernel, and information about
-the problems which may result by upgrading your kernel.
+#Aim:
+The aim of this assignment is to create a Linux kernel module that queries various MSRs to determine virtualization features available in CPU. The module reports th efeatures it discovers. Following things needs to be developed.
+    * Configure a Linux machine, either VM based or on real hardware. You may use any Linux 
+    distribution you wish.
+    * Download and build the Linux kernel source code
+    * Create a new kernel module with the assignment functionality
+    * Load (insert) the new module
+    * Verify proper output in the system message log.
+#Funtionalities:
+    * Read the VMX configuration MSRs to ascertain support capabilities/features
+    * Entry / Exit / Procbased / Secondary Procbased / Pinbased controls
+    * For each group of controls above, interpret and output the values read from the MSR to the system
+    via printk(..), including if the value can be set or cleared.
+    
+#Implementation details:
+* Install VMware Workstation on the Windows 11 machine.
+* Downloaded the Operating system image of the Ubuntu 22.04 LTS Desktop version.
+* Spin up a new virtual machine with below settings of Ubuntu OS in VMware Workstation.
