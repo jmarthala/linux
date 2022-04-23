@@ -41,7 +41,7 @@ Following steps are followed to build the kernel
 •	sudo virt-manager
 
 
-![image](https://user-images.githubusercontent.com/78889688/164883347-284806f0-23ef-4467-a8dc-82fc8b967d45.png)
+![virt](https://user-images.githubusercontent.com/78889688/164883673-1b14fedc-72ca-4ad0-8365-7b9b56b01a00.png)
  
 
 Install CPUID using “sudo apt install cpuid”. And in the inner VM execute the following command. 
