@@ -2,7 +2,7 @@ Assignment 1
 Name: Jahnavi Marthala
 SJSU Id: 015351323
 
-![Input](https://github.com/jmarthala/linux/blob/master/Images/vv.png "title")
+![image](https://user-images.githubusercontent.com/78889688/164864547-0d0d25c1-8506-4382-a202-f12b60232ded.png)
 
 Aim:
 The aim of this assignment is to create a Linux kernel module that queries various MSRs to determine virtualization features available in CPU. The module reports the features it discovers. Following things needs to be developed.
