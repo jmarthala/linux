@@ -53,6 +53,6 @@ cpuid -l 0X4fffffff -s exit_number cpuid -l 0X4ffffffe -s exit_number
 
 
 
-
+![cpu](https://user-images.githubusercontent.com/78889688/164883716-054ba9cd-6978-44a0-950b-240c63149c90.png)
 
 
