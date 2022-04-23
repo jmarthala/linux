@@ -70,6 +70,9 @@
 MODULE_AUTHOR("Qumranet");
 MODULE_LICENSE("GPL");
 
+extern atomic_t total_number_of_exits;
+extern atomic64_t total_time_taken_for_all_exits;
+
 #ifdef MODULE
 static const struct x86_cpu_id vmx_cpu_id[] = {
 	X86_MATCH_FEATURE(X86_FEATURE_VMX, NULL),
@@ -6012,6 +6015,10 @@ static int __vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 	u32 vectoring_info = vmx->idt_vectoring_info;
 	u16 exit_handler_index;
 
+	u64 starting_time;
+	starting_time = rdtsc();
+	atomic_inc(&total_number_of_exits);
+
 	/*
 	 * Flush logged GPAs PML buffer, this will make dirty_bitmap more
 	 * updated. Another good is, in kvm_vm_ioctl_get_dirty_log, before
@@ -6167,6 +6174,8 @@ static int __vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 						kvm_vmx_max_exit_handlers);
 	if (!kvm_vmx_exit_handlers[exit_handler_index])
 		goto unexpected_vmexit;
+	
+	atomic64_add(rdtsc() - starting_time, &total_time_taken_for_all_exits);
 
 	return kvm_vmx_exit_handlers[exit_handler_index](vcpu);
 
