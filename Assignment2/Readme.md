@@ -46,16 +46,19 @@ Following steps are followed to build the kernel
 Spin up new VM
 ![vm](https://user-images.githubusercontent.com/78889688/164883936-276eb656-e027-4d41-95bc-7e16ce48e90d.png)
  
-
+Execute sudo apt-get install -y update
 Install CPUID using “sudo apt install cpuid”. And in the inner VM execute the following command. 
 
 Also in the /etc/apt/sources.list file add 'deb http://mirrors.kernel.org/ubuntu bionic main universe'.
+ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 9578539176BAFBC6
+ apt-key list
 
-cpuid -l 0X4fffffff -s exit_number cpuid -l 0X4ffffffe -s exit_number
+cpuid -l 0X4fffffff -s exit_number 
+cpuid -l 0X4ffffffe -s exit_number
 
 
+![output](https://user-images.githubusercontent.com/78889688/165623690-a7fa51cd-4358-45cd-bf16-ef3ecd4bc520.png)
 
-
-![cpu](https://user-images.githubusercontent.com/78889688/164883716-054ba9cd-6978-44a0-950b-240c63149c90.png)
+![exits](https://user-images.githubusercontent.com/78889688/165623701-737aad53-8657-498b-a522-5069bae1c1df.png)
 
 
