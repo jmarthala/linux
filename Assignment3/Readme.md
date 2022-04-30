@@ -122,6 +122,9 @@ Dmesg output for 0x4FFFFFFC
 more exits performed during certain VM operations? Approximately how many exits does a full VM 
 boot entail?
 
+Number of exits does not increase at a stable rate. It changes based on VM operations. Operations like External Interrrupt, I/O instruction etc will cause more exits. A full VM boot entails around a maximum of 5682048 exits.
+
+![WhatsApp Image 2022-04-29 at 6 56 37 PM](https://user-images.githubusercontent.com/78889688/166086188-ee08dd7b-7038-4a64-938d-8fc0287ecee8.jpeg)
 
 
 4. Of the exit types defined in the SDM, which are the most frequent? Least?
